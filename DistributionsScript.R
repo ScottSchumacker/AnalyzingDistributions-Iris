@@ -50,6 +50,47 @@ ggplot(iris, aes(x = Petal.Width)) +
 # Appears skewed
 # Data is not centered around the mean and median and mean is lower than median
 
+# Visualizing distributions by group
+# Grouped histograms
+iris %>% 
+  ggplot(aes(x = Sepal.Length, fill = Species)) +
+  geom_histogram(color = "black") +
+  theme_classic()
+
+iris %>% 
+  ggplot(aes(x = Sepal.Width, fill = Species)) +
+  geom_histogram(color = "black") +
+  theme_classic()
+
+iris %>% 
+  ggplot(aes(x = Petal.Length, fill = Species)) +
+  geom_histogram(color = "black") +
+  theme_classic()
+# Setosa species tends to deviate from the rest and petal length is shorter
+
+iris %>% 
+  ggplot(aes(x = Petal.Width, fill = Species)) +
+  geom_histogram(color = "black") +
+  theme_classic()
+# Setosa species tends to deviate from the rest and petal width is smaller
+
+# Grouped box plots
+iris %>% 
+  ggplot(aes(x = Species, y = Petal.Length, fill = Species)) +
+  geom_boxplot()
+
+iris %>% 
+  ggplot(aes(x = Species, y = Petal.Width, fill = Species)) +
+  geom_boxplot()
+
+iris %>% 
+  ggplot(aes(x = Species, y = Sepal.Width, fill = Species)) +
+  geom_boxplot()
+
+iris %>% 
+  ggplot(aes(x = Species, y = Sepal.Length, fill = Species)) +
+  geom_boxplot()
+
 # Running Shapiro-Wilk test to see if our features are normally distributed
 # H0: Data is normally distributed
 # Ha: Data is not normally distributed
