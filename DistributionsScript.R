@@ -51,3 +51,17 @@ ggplot(iris, aes(x = Petal.Width)) +
 # Data is not centered around the mean and median and mean is lower than median
 
 # Running Shapiro-Wilk test to see if our features are normally distributed
+# H0: Data is normally distributed
+# Ha: Data is not normally distributed
+
+shapiro.test(iris$Sepal.Length)
+# Sepal Length data is not normally distributed
+
+shapiro.test(iris$Sepal.Width)
+# Sepal Width data is normally distributed
+
+shapiro.test(iris$Petal.Length)
+# Petal Length data is not normally distributed
+
+shapiro.test(iris$Petal.Width)
+# Petal Width data is not normally distributed
