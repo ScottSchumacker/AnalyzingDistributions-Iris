@@ -77,19 +77,23 @@ iris %>%
 # Grouped box plots
 iris %>% 
   ggplot(aes(x = Species, y = Petal.Length, fill = Species)) +
-  geom_boxplot()
+  geom_boxplot() + 
+  theme_classic()
 
 iris %>% 
   ggplot(aes(x = Species, y = Petal.Width, fill = Species)) +
-  geom_boxplot()
+  geom_boxplot() +
+  theme_classic()
 
 iris %>% 
   ggplot(aes(x = Species, y = Sepal.Width, fill = Species)) +
-  geom_boxplot()
+  geom_boxplot() +
+  theme_classic()
 
 iris %>% 
   ggplot(aes(x = Species, y = Sepal.Length, fill = Species)) +
-  geom_boxplot()
+  geom_boxplot() +
+  theme_classic()
 
 # Running Shapiro-Wilk test to see if our features are normally distributed
 # H0: Data is normally distributed
